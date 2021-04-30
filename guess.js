@@ -2,7 +2,7 @@ let answer = Math.trunc(Math.random() * 100) + 1;
 let score = 10;
 let highscore = 0;
 let max = 100;
-let min = 0;
+let min = 1;
 
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
@@ -53,7 +53,7 @@ document.querySelector(".check").addEventListener("click", function () {
 document.querySelector(".again").addEventListener("click", function () {
   answer = Math.trunc(Math.random() * 100) + 1;
   score = 10;
-  min = 0;
+  min = 1;
   max = 100;
   document.querySelector(".guess").textContent = "";
   document.querySelector(".secret").textContent = "?";
