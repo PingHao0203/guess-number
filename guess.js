@@ -1,5 +1,5 @@
 let answer = Math.trunc(Math.random() * 100) + 1;
-let score = 20;
+let score = 10;
 let highscore = 0;
 let max = 100;
 let min = 0;
@@ -52,13 +52,13 @@ document.querySelector(".check").addEventListener("click", function () {
 
 document.querySelector(".again").addEventListener("click", function () {
   answer = Math.trunc(Math.random() * 100) + 1;
-  score = 20;
+  score = 10;
   min = 0;
   max = 100;
   document.querySelector(".guess").textContent = "";
   document.querySelector(".secret").textContent = "?";
   document.querySelector(".message").textContent =
     "<-- Guessing number between 1 to 100 -->";
-  document.querySelector(".score").textContent = 20;
+  document.querySelector(".score").textContent = 10;
   document.querySelector("body").style.backgroundColor = "#222";
 });
