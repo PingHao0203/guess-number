@@ -7,7 +7,7 @@ let min = 1;
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
 
-  if (!guess || guess < 1) {
+  if (!guess || guess < 1 || guess > 1000) {
     document.querySelector(".message").textContent = "Invalid input!";
   } else if (guess > answer) {
     if (score > 1) {
