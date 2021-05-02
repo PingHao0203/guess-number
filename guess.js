@@ -7,7 +7,7 @@ let min = 1;
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
 
-  if (!guess || guess > 100 || guess < 1) {
+  if (!guess || guess < 1) {
     document.querySelector(".message").textContent = "Invalid input!";
   } else if (guess > answer) {
     if (score > 1) {
@@ -50,7 +50,7 @@ document.querySelector(".check").addEventListener("click", function () {
   }
 });
 
-document.querySelector(".again").addEventListener("click", function () {
+document.querySelector(".easy").addEventListener("click", function () {
   answer = Math.trunc(Math.random() * 100) + 1;
   score = 10;
   min = 1;
@@ -59,6 +59,32 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector(".secret").textContent = "?";
   document.querySelector(".message").textContent =
     "<-- Guessing number between 1 to 100 -->";
+  document.querySelector(".score").textContent = 10;
+  document.querySelector("body").style.backgroundColor = "#222";
+});
+
+document.querySelector(".normal").addEventListener("click", function () {
+  answer = Math.trunc(Math.random() * 500) + 1;
+  score = 10;
+  min = 1;
+  max = 500;
+  document.querySelector(".guess").textContent = "";
+  document.querySelector(".secret").textContent = "?";
+  document.querySelector(".message").textContent =
+    "<-- Guessing number between 1 to 500 -->";
+  document.querySelector(".score").textContent = 10;
+  document.querySelector("body").style.backgroundColor = "#222";
+});
+
+document.querySelector(".hard").addEventListener("click", function () {
+  answer = Math.trunc(Math.random() * 1000) + 1;
+  score = 10;
+  min = 1;
+  max = 1000;
+  document.querySelector(".guess").textContent = "";
+  document.querySelector(".secret").textContent = "?";
+  document.querySelector(".message").textContent =
+    "<-- Guessing number between 1 to 1000 -->";
   document.querySelector(".score").textContent = 10;
   document.querySelector("body").style.backgroundColor = "#222";
 });
